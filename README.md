@@ -15,9 +15,9 @@ In our Midterm project, our team looked at important songs of each era as outlin
 
 Since K-pop music albums are often strongly associated with its visual branding and concept, we thought it would be interesting to look at album covers from top K-pop albums to new generate concepts with (to clarify, the definition we are using for “K-pop” refers to Korean “idol music” as opposed to all Korean pop songs). For this dataset, we plan on using the Gaon Album Chart data to find the top-selling albums for the 2010s. With few exceptions, all of these happen to be K-pop albums, which would be expected considering the collectible nature of K-pop albums. The album cover images can be found on Melon. 
 
-Our first exploration will be a focused on generating album art based on the top selling albums of recent korean history. We then want to explore different datasets of album art from popular boy groups, girl groups, and solo artists, to see the constrating or similar aspects of each demographic. In short, our project will provide greater insight into visual aspects of what makes a popular korean album in conjunction with specific categories like girl groups, boy groups, and solo artists.
+Our first exploration will be a focused on generating album art based on the top selling albums of recent korean history. We then want to explore different datasets of album art from popular boy groups, girl groups, and their icons/logos, to see the constrating or similar aspects of each demographic. Finally we will scrap random kpop album art from Google and Bing to have a more generalized and larger dataset to generate album art from, also to see how different general kpop album covers are from popular kpop albums. In short, our project will provide greater insight into visual aspects of what makes a popular korean album in conjunction with specific categories like girl groups and boy groups.
 
-To achieve all of this, our technical process will include the use of jupyterhub while utilizing numerous libraries including TensorFlow, Pillow, Keras, and scikit-learn to recreate a deep learning model (GAN) that will help us generate album art and display our results in jpg format. 
+To achieve all of this, our technical process will include the use of jupyterhub while utilizing numerous libraries including TensorFlow, Pillow, Keras, and scikit-learn to recreate a generative adversarial netwrok (GAN) that will help us process new album art and display our results in jpg format. 
 
 https://towardsdatascience.com/generating-modern-arts-using-generative-adversarial-network-gan-on-spell-39f67f83c7b4
 
@@ -28,7 +28,7 @@ https://heartbeat.fritz.ai/stylegans-use-machine-learning-to-generate-and-custom
 
 ## Data and Model
 
-(10 points) 
+
 
 In the final submission, this section will describe both the data you use for this project and any pre-existing models/neural nets. For each you should provide the name, a textual description, and a link. If there is a paper (for neural net) link that as well.
 - Such and such Neural Net. The short description of this neural net. 
@@ -85,7 +85,13 @@ Any implementation details or notes we need to repeat your work.
 
 ## Reference
 
-All references to papers, techniques, previous work, repositories you used should be collected at the bottom:
-- Papers
-- Repositories
-- Blog posts
+https://towardsdatascience.com/dcgans-generating-dog-images-with-tensorflow-and-keras-fb51a1071432
+
+https://morioh.com/p/47eeee99095d
+
+https://mlwhiz.com/blog/2019/06/17/gans/
+
+https://www.researchgate.net/publication/318987126_Album_Cover_Generation_from_Genre_Tags
+
+https://machinelearningmastery.com/what-are-generative-adversarial-networks-gans/
+

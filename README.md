@@ -22,22 +22,22 @@ To achieve all of this, our technical process will include the use of jupyterhub
 
 ## Data and Model
 
-Our main training data is from the Gaon Album Chart, Korea’s national music chart, and every year since 2010 they provide a top 10 list of the best-selling albums of the entire year. Gaon’s ranking process revolves around compiling domestic shipments in weekly, monthly, and year-end formats to which we will utilize their year-end charts.The album cover images will be collected from Melon, Korea's top streaming service, to have accurate digital images of the respective albums in their native country. [Link to Gaon Album Chart Data](https://en.wikipedia.org/wiki/Gaon_Album_Chart)
+Our main training data is from the Gaon Album Chart, Korea’s national music chart, and every year since 2010 they provide a top 10 list of the best-selling albums in Korea of the entire year. Gaon’s ranking process revolves around compiling domestic shipments in weekly, monthly, and year-end formats to which we will utilize their year-end charts.The album cover images will be collected and downloaded from Melon, Korea's top streaming service, to have accurate digital images of the respective albums in their native country. [Link to Gaon Album Chart Data](https://en.wikipedia.org/wiki/Gaon_Album_Chart)
 
-Since our main dataset is limited by the size of around 100 popular covers, for additional exploration purposes we will also collect a different generalized/larger dataset by scrapping random kpop album art from Google and Bing to further generate new album covers from. To achieve this, we will be utilizing the icrawler python library and input english and korean keywords such as ‘kpop album art’ to download around 500 random covers. [Link to icrawler library](https://developer.aliyun.com/mirror/npm/package/icrawler).
+Since our main dataset is limited by the size of around 100 popular covers, for additional exploration purposes we will also collect a different generalized/larger dataset by scrapping random kpop album art from Google and Bing to further generate new album covers from. To achieve this, we will be utilizing the icrawler python library and input english and korean keywords such as ‘kpop album art’ to download around 400 random covers. [Link to icrawler library](https://developer.aliyun.com/mirror/npm/package/icrawler).
 
-Our generative adversarial model is based on MLWhiz’s DC-GAN architecture to which they generated new anime characters from. The idea behind the GAN originated from the paper, [“Unsupervised Representation Learning With Deep Convolutional Generative Adversarial Network”](https://arxiv.org/pdf/1511.06434.pdf) by Alex Radford, Luke Metz, and Soumith, where they discussed how the two main components were a generator and a discriminator. [Link to MLWhiz](https://mlwhiz.com/blog/2019/06/17/gans/).
+Our generative adversarial model is based on MLWhiz’s DC-GAN architecture to which they generated new anime characters from. The idea behind the GAN originated from the paper, [“Unsupervised Representation Learning With Deep Convolutional Generative Adversarial Network”](https://arxiv.org/pdf/1511.06434.pdf) by Alex Radford, Luke Metz, and Soumith, where they discussed how the to implement a more stable training implementation through a generator architecture to which creates fakes. The discriminator on the other hand contains a multitude of convolutional layers in conjunction with a dense layer to predict if a given image is fake or not. The model provided a basis for our exploration and generative process. [Link to MLWhiz](https://mlwhiz.com/blog/2019/06/17/gans/).
 
 
 ## Code
 
 [Scrapping Code File](code/scrapper.ipynb)
 
-For the data acquistion portion of our code, we first utilized icrawler's 
+For the data acquisition portion of our code, we first utilized crawlers built in libraries and imported GoogleImageCrawler and BingImageCrawler. We further utilized those function in conjunction with specific keywords in both english and korean like '한국 앨범 표지' which translates to 'Korean Album Cover,' to download a set of over 400 images. We ran the code twice as a few images were not particularly album covers to which we hand deleted them.
 
 [Preprocessing & Neural Network Code File](code/network.ipynb)
 
-For the analysis portion of our code, 
+For the analysis portion of our code, we first had to preprocess the given datasets and normalize the aspect ratio and resolution size to be balanced among every album image. To achieve this we repurposed a thumbnail function to resize every image to be 512 by 512 thus transforming the aspect ratio to a square like normal album covers. After normalizing each image, we imported keras, imageio, pillow, and tensorflow to reconstruct helper functions that contribute to the overall generator and discriminator model. The generator architecture utilizes transposed convolutional layers which are then used to upsample the noise vector to an image, and we further removed many dense layers to make the model fully convolutional. The discriminator on the other hand utilizes a sequence of convolutional layers with a dense layer to predict if an image is either fake or not. Thus to begin training
 
 (20 points)
 

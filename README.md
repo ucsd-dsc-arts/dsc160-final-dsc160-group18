@@ -31,6 +31,14 @@ Our generative adversarial model is based on MLWhiz’s DC-GAN architecture to w
 
 ## Code
 
+[Scrapping Code File](code/scrapper.ipynb)
+
+For the data acquistion portion of our code, we first utilized icrawler's 
+
+[Preprocessing & Neural Network Code File](code/network.ipynb)
+
+For the analysis portion of our code, 
+
 (20 points)
 
 This section will link to the various code for your project (stored within this repository). Your code should be executable on datahub, should we choose to replicate your result. This includes code for: 

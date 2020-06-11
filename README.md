@@ -60,12 +60,12 @@ And finally here is our last few results from this session which we felt were de
 
 ![8800th output](/results/popular16/output8800_image.jpg)
 
-![9999th output](/results/popular16/output9999_image.jpg)
+![9600th output](/results/popular16/output9600_image.jpg)
 
 
 Our second attempt fell short of the 10,000 step mark as our computer shut down a few hours in, but for this attempt we utilized a batch size of 64 with the same noise shape of (1,1,100). We noticed that the results were much more detailed and clear but still generally burry in most cases. We felt as these modified inputs provided better and clearer generative results, however the drawback was a much slower generative process which we had to run overnight.
 
-Here is the 100th step, as the model began to train on the datset. It looks about the same as the previous attempt, which wasn't suprising.
+Here is the 100th step, as the model began to train on the datset. It looks about the same as the previous attempt, which wasn't suprising. It does seem more uniform in noise and color than the previous session, but that mightjust due to the random noise vector that was generated for this time.
 
 ![100th output](results/popular64/output0100_image.jpg)
 
@@ -73,7 +73,7 @@ Here is the 1000th step. We defintely felt more optimistic for this session as t
 
 ![1000th output](results/popular64/output1000_image.jpg)
 
-And finally here is our last few result from this session, which produced fairly finer results that we felt were 
+And finally here is our last few results from this session, which produced fairly finer results that we felt were more compeling in variation and slightly clearer that our previous generative session.
 
 ![6200th output](results/popular64/output6200_image.jpg)
 
@@ -81,21 +81,15 @@ And finally here is our last few result from this session, which produced fairly
 
 ![6700th output](results/popular64/output6700_image.jpg)
 
-Lastly we complied a gif of the generative process as our GAN began training, each iteration is after 100 steps with the ending being the 6700th step.
+Lastly we complied a gif of the generative process as our GAN began training, and each iteration is after 100 steps with the ending being the 6700th step. The progress of the gif shows the training process of our GAN and it visually depicts how the GAN loss is decreasing on average the more steps it runs.
 
 ![gif progress](/results/progress.gif)
 
 
-
-(30 points) 
-
-This section should summarize your results and will embed links to documentation to significant outputs. This should document both process and show artistic results. This can include figures, sound files, videos, bitmaps, as appropriate to your generative art idea. Each result should include a brief textual description, and all should be listed below: 
-
-- image files (`.jpg`, `.png` or whatever else is appropriate)
-- audio files (`.wav`, `.mp3`)
-- written text as `.pdf`
-
 ## Discussion
+
+After running multiple sessions with our GAN, one thing was defintely certain: we had no idea what results the next step was going to produce. It was a fascinating and interesting process and the more time the model trained, the more variations of shapes, details and popular color schemes came to light. We felt as the results were defintely not perfect in any picturesque standards, but by the end we noticed familiar but new/fresh conceptual ideas that could potentially provide compelling insight and inspiration for the kpop industry within the visual sector. 
+
 
 (30 points, three to five paragraphs)
 

@@ -85,8 +85,10 @@ Lastly we complied a gif of the generative process as our GAN began training, an
 
 ![gif progress](/results/progress.gif)
 
+From our dataset, we noticed that guy groups and girl groups have very different visual concepts, so to generate an album cover more representative of type of group, we separated our dataset into guy groups and girl groups.
+This is the result from the guy group dataset:
 ![gif_guygroup](/results/malegroup.gif)
-
+This is the result from the girl group dataset:
 ![gif_girlgroup](/results/femalegroup.gif)
 
 

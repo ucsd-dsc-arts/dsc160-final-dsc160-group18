@@ -21,7 +21,7 @@ To achieve all of this, our technical process will include the use of jupyterhub
 
 ## Data and Model
 
-Our main training data is from the Gaon Album Chart, Korea’s national music chart, and every year since 2010 they provide a top 10 list of the best-selling albums in Korea of the entire year. Gaon’s ranking process revolves around compiling domestic shipments in weekly, monthly, and year-end formats to which we will utilize their year-end charts.The album cover images will be collected and downloaded from Melon, Korea's top streaming service, to have accurate digital images of the respective albums in their native country. [Link to Gaon Album Chart Data](https://en.wikipedia.org/wiki/Gaon_Album_Chart)
+Our main training data is from the Gaon Album Chart, Korea’s national music chart, and every year since 2010 they provide a top 10 list of the best-selling albums in Korea of the entire year. Gaon’s ranking process revolves around compiling domestic shipments in weekly, monthly, and year-end formats to which we will utilize their year-end charts. The album cover images will be collected and downloaded from Melon, Korea's top streaming service, to have accurate digital images of the respective albums in their native country. [Link to Gaon Album Chart Data](https://en.wikipedia.org/wiki/Gaon_Album_Chart)
 
 Since our main dataset is limited by the size of around 100 popular covers, for additional exploration purposes we will also collect a different generalized/larger dataset by scrapping random kpop album art from Google and Bing to further generate new album covers from. To achieve this, we will be utilizing the icrawler python library and input english and korean keywords such as ‘kpop album art’ to download around 400 random covers. [Link to icrawler library](https://developer.aliyun.com/mirror/npm/package/icrawler).
 
@@ -44,9 +44,9 @@ Thus to begin the training process, we sample a batch of images from the dataset
 
 ## Results
 
-After multiple sessions with the GAN, we tested many different factors in how to generate better and more qualitative results that represented the dataset in a more cohesive way. For our first attempt on the popular albums dataset, we utilized a batch size of 16 and a noise shape of (1,1,100) with a step number of 10,000. We noticed that the results were decent but mostly unrecognizable or specific enought to tell what they represented. 
+After multiple sessions with the GAN, we tested many different factors in how to generate better and more qualitative results that represented the dataset in a more cohesive way. For our first attempt on the popular albums dataset, we utilized a batch size of 16 and a noise shape of (1,1,100) with a step number of 10,000. We noticed that the results were decent but mostly unrecognizable or not specific enough to tell what they represent. 
 
-Here is the 100th step, as the model began to train on the datset. The results were as expected, there is not much character or variety as just the model just started to train.
+Here is the 100th step, as the model began to train on the datset. The results were as expected, there is not much character or variety as the model just started to train.
 
 ![100th output](/results/popular16/output0100_image.jpg)
 
@@ -54,26 +54,26 @@ Here is the 1000th step, as the model began to produce better and more regonizab
 
 ![1000th output](/results/popular16/output1000_image.jpg)
 
-And finally here is our last few result from this session which I felt was decently representative of the datset. Some of the generated album covers were defintely more recognizable and full of popular colors that the dataset shared among each other.
+And finally here is our last few results from this session which we felt were decently representative of the datset. Some of the generated album covers were defintely more recognizable and full of popular colors that the dataset shared among each other, while the others were not so pleasing to the eye. I think the results were interesting due to the color schemes and the overall abstractness of the shapes, alloted a wide variety of new conceptual themes for future album art. 
 
 ![7900th output](/results/popular16/output7900_image.jpg)
 
-![9500th output](/results/popular16/output9500_image.jpg)
+![8800th output](/results/popular16/output8800_image.jpg)
 
-![9999th output](/results/popular16/output9999fixed_image.png)
+![9999th output](/results/popular16/output9999_image.jpg)
 
 
-Our second attempt fell short of the 10,000 step mark as my computer shut down a few hours in, but for this attempt we utilized a batch size of 64 with the same noise shape of (1,1,100). We noticed that the results were much more detailed and clear but still generally burry in most cases. We felt as these changed values provided better generative results, however the consequence was a much slower generative process which we ran overnight.
+Our second attempt fell short of the 10,000 step mark as our computer shut down a few hours in, but for this attempt we utilized a batch size of 64 with the same noise shape of (1,1,100). We noticed that the results were much more detailed and clear but still generally burry in most cases. We felt as these modified inputs provided better and clearer generative results, however the drawback was a much slower generative process which we had to run overnight.
 
-Here is the 100th step, as the model began to train on the datset. It looks about the same as the previous attempt.
+Here is the 100th step, as the model began to train on the datset. It looks about the same as the previous attempt, which wasn't suprising.
 
 ![100th output](results/popular64/output0100_image.jpg)
 
-Here is the 1000th step, as the model began to produce better and regonizable results.
+Here is the 1000th step. We defintely felt more optimistic for this session as the results were getting produced at a faster rate, in terms of steps, than our previous session. 
 
 ![1000th output](results/popular64/output1000_image.jpg)
 
-And finally here is our last few result from this session, which produced result
+And finally here is our last few result from this session, which produced fairly finer results that we felt were 
 
 ![6200th output](results/popular64/output6200_image.jpg)
 

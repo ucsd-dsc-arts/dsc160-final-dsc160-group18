@@ -97,13 +97,16 @@ This is the result from the girl group dataset:
 
 Lastly, moving to our general albums dataset which is sustainably larger than our popular albums dataset due to the scrapping process, we wanted to understand how general kpop album art compares to their popular counterparts. So for this exploration, we utilized a batch size of 32 (to quicken the process) and a noise shape of (1,1,128). 
 
-Here are some of final results we produced, which we felt turned out fairly more vibrant and diverse in thematic abstractions compared to our previous results. 
+Here are some of final results we produced, which we felt turned out fairly more vibrant and diverse in thematic abstractions compared to our previous results.
 
-![1000th output](/results/general32/output4300_image.jpg)
+![4300th output](/results/general32/output4300_image.jpg)
 
-![1000th output](/results/general32/output5300_image.jpg)
+![5300th output](/results/general32/output5300_image.jpg)
 
-![1000th output](/results/general32/output5800_image.jpg)
+![5800th output](/results/general32/output5800_image.jpg)
+
+Here is the progress throughout the training process for the general albums dataset in gif format.
+![gif_guygroup](/results/generalprogress.gif)
 
 ## Discussion
 

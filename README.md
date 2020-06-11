@@ -85,6 +85,25 @@ Lastly we complied a gif of the generative process as our GAN began training, an
 
 ![gif progress](/results/progress.gif)
 
+From our dataset, we noticed that guy groups and girl groups have very different visual concepts, so to generate an album cover more representative of type of group, we separated our dataset into guy groups and girl groups.
+
+This is the result from the guy group dataset:
+
+![gif_guygroup](/results/malegroup.gif)
+
+This is the result from the girl group dataset:
+
+![gif_girlgroup](/results/femalegroup.gif)
+
+Lastly, moving to our general albums dataset which is sustainably larger than our popular albums dataset due to the scrapping process, we wanted to understand how general kpop album art compares to their popular counterparts. So for this exploration, we utilized a batch size of 32 (to quicken the process) and a noise shape of (1,1,128). 
+
+Here are some of final results we produced, which we felt turned out fairly more vibrant and diverse in thematic abstractions compared to our previous results. 
+
+![1000th output](/results/general32/output4300_image.jpg)
+
+![1000th output](/results/general32/output5300_image.jpg)
+
+![1000th output](/results/general32/output5800_image.jpg)
 
 ## Discussion
 
@@ -94,19 +113,16 @@ After running multiple sessions with our GAN, one thing was definitely certain: 
 
 Kpop as an industry is very structured along specific visual subject matter, whether a dark “bad boy” theme or a pink cutesy concept, year after year the popular thematic visual styles remain. Since these popular styles are often recreated by group after group, innovation within visuals is a difficult feat to accomplish. That’s where the generative process can become a future trajectory for the industry as a whole to gather new and fresh concepts that are trained on a dataset of already successful/popular albums throughout the years. While generating album art isn't going to completely overtake the traditional art production yet, it provides an insightful look into the aspects and details that make up the most successful albums.
 
+Some concerns that may arise come alongside with the pre-existing criticism of how artificial/industrial the kpop industry already is. The kpop industry produces its talent as if it were a factory producing a product, everything created is targeted to appeal to a wide audience and make the most amount of money. There are rarely any instances where a group starts from one of their mother's basement and builds its fanbase from the ground up, rather each band member has been selected, trained and groomed to fit a certain model. The fact album covers could also be computer generated could take this ciriticism even further, and completely take the human creativity aspect out of the industry altogether.
+
 As for future developments, we would like to improve upon our dataset, to further understand how well our GAN works and potentially improve upon the overall quality of the generated results. Right now our dataset consists of the top 10 kpop albums of each year since 2010, and a lot of the covers are unfortunately reissues of the same album reducing the uniqueness per data. Another issue that comes to mind is how there are only 11 covers by female artists (to which there are only 2 female groups that make up those 11) in the top 100 kpop albums of the past decade, so our generated results are unfairly heavily trained on a majority of male group artists. By improving our dataset to include a more diverse set of demographic groups, we can potentially reduce the bias within our current training process.
 
 
-The subsequent paragraphs could address questions including:
-- Why is this culturally innovative?
-- How does your generative computational approach differ from traditional art/music/cultural production? 
-- How do your results relate to broader social, cultural, economic political, etc., issues? 
-- What are the ethical concerns for this form of generative art? 
-- In what future directions could you expand this work?
-
 ## Team Roles
 
-Provide an account of individual members and their efforts/contributions to the specific tasks you accomplished.
+Nicholas Kho: Data collectiom, training the Guy Group/ Girl Group GANS and writing part of the discussion portion.
+
+Brian Qian: Abstract writing (partial), Data collection & explanation, scrapping code & neural network code files, training the popular album dataset & general album dataset, and writing part of the discussion.
 
 ## Technical Notes and Dependencies
 

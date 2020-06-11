@@ -85,6 +85,10 @@ Lastly we complied a gif of the generative process as our GAN began training, an
 
 ![gif progress](/results/progress.gif)
 
+![gif_guygroup](/results/malegroup.gif)
+
+![gif_girlgroup](/results/femalegroup.gif)
+
 
 ## Discussion
 

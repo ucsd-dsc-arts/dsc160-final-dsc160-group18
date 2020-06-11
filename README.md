@@ -106,6 +106,7 @@ Here are some of final results we produced, which we felt turned out fairly more
 ![5800th output](/results/general32/output5800_image.jpg)
 
 Here is the progress throughout the training process for the general albums dataset in gif format.
+
 ![gif_guygroup](/results/generalprogress.gif)
 
 ## Discussion

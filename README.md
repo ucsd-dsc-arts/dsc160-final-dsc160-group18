@@ -44,7 +44,7 @@ Thus to begin the training process, we sample a batch of images from the dataset
 
 ## Results
 
-After multiple sessions with the generator, we tested many different factors in how to generate better and more qualitative results that represented the dataset in a more cohesive way. For our first attempt we utilized a batch size of 16 and a noise shape of (1,1,100) with a step number of 10,000. We noticed that the results were decent but mostly unrecognizable or specific enought to tell what they represented. 
+After multiple sessions with the GAN, we tested many different factors in how to generate better and more qualitative results that represented the dataset in a more cohesive way. For our first attempt on the popular albums dataset, we utilized a batch size of 16 and a noise shape of (1,1,100) with a step number of 10,000. We noticed that the results were decent but mostly unrecognizable or specific enought to tell what they represented. 
 
 Here is the 100th step, as the model began to train on the datset. The results were as expected, there is not much character or variety as just the model just started to train.
 
@@ -52,15 +52,16 @@ Here is the 100th step, as the model began to train on the datset. The results w
 
 Here is the 1000th step, as the model began to produce better and more regonizable results. There is alot more variety, color, and abstract shapes which we hoped would develop better over time.
 
-![1000th output](/results/popular16)/output1000_image.jpg)
+![1000th output](/results/popular16/output1000_image.jpg)
 
-And finally here is our last few result from this session which I felt was decently representative of the datset. Some of the generated album covers were defintely more recognizable.
+And finally here is our last few result from this session which I felt was decently representative of the datset. Some of the generated album covers were defintely more recognizable and full of popular colors that the dataset shared among each other.
 
 ![7900th output](/results/popular16/output7900_image.jpg)
 
 ![9500th output](/results/popular16/output9500_image.jpg)
 
-![9999th output](/results/popular16/output9999_image.jpg)
+![9999th output](/results/popular16/output9999fixed_image.png)
+
 
 Our second attempt fell short of the 10,000 step mark as my computer shut down a few hours in, but for this attempt we utilized a batch size of 64 with the same noise shape of (1,1,100). We noticed that the results were much more detailed and clear but still generally burry in most cases. We felt as these changed values provided better generative results, however the consequence was a much slower generative process which we ran overnight.
 
@@ -74,6 +75,15 @@ Here is the 1000th step, as the model began to produce better and regonizable re
 
 And finally here is our last few result from this session, which produced result
 
+![6200th output](results/popular64/output6200_image.jpg)
+
+![6400th output](results/popular64/output6400_image.jpg)
+
+![6700th output](results/popular64/output6700_image.jpg)
+
+Lastly we complied a gif of the generative process as our GAN began training, each iteration is after 100 steps with the ending being the 6700th step.
+
+![gif progress](/results/progress.gif)
 
 
 

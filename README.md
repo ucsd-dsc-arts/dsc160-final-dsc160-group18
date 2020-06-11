@@ -21,7 +21,7 @@ To achieve all of this, our technical process will include the use of jupyterhub
 
 ## Data and Model
 
-Our main training data is from the Gaon Album Chart, Korea’s national music chart, and every year since 2010 they provide a top 10 list of the best-selling albums in Korea of the entire year. Gaon’s ranking process revolves around compiling domestic shipments in weekly, monthly, and year-end formats to which we will utilize their year-end charts.The album cover images will be collected and downloaded from Melon, Korea's top streaming service, to have accurate digital images of the respective albums in their native country. [Link to Gaon Album Chart Data](https://en.wikipedia.org/wiki/Gaon_Album_Chart)
+Our main training data is from the Gaon Album Chart, Korea’s national music chart, and every year since 2010 they provide a top 10 list of the best-selling albums in Korea of the entire year. Gaon’s ranking process revolves around compiling domestic shipments in weekly, monthly, and year-end formats to which we will utilize their year-end charts. The album cover images will be collected and downloaded from Melon, Korea's top streaming service, to have accurate digital images of the respective albums in their native country. [Link to Gaon Album Chart Data](https://en.wikipedia.org/wiki/Gaon_Album_Chart)
 
 Since our main dataset is limited by the size of around 100 popular covers, for additional exploration purposes we will also collect a different generalized/larger dataset by scrapping random kpop album art from Google and Bing to further generate new album covers from. To achieve this, we will be utilizing the icrawler python library and input english and korean keywords such as ‘kpop album art’ to download around 400 random covers. [Link to icrawler library](https://developer.aliyun.com/mirror/npm/package/icrawler).
 
@@ -44,41 +44,52 @@ Thus to begin the training process, we sample a batch of images from the dataset
 
 ## Results
 
-After multiple sessions with the generator, we tested many different factors in how to generate better and more qualitative results that represented the dataset in a more cohesive way. For our first attempt we utilized a batch size of 16 and a noise shape of (1,1,100) with a step number of 10,000. We noticed that the results were decent but mostly unrecognizable or specific enought to tell what they represented. 
+After multiple sessions with the GAN, we tested many different factors in how to generate better and more qualitative results that represented the dataset in a more cohesive way. For our first attempt on the popular albums dataset, we utilized a batch size of 16 and a noise shape of (1,1,100) with a step number of 10,000. We noticed that the results were decent but mostly unrecognizable or not specific enough to tell what they represent. 
 
-Here is the 100th step, as the model began to train on the datset. The results were as expected, there is not much character or variety as just the model just started to train.
+Here is the 100th step, as the model began to train on the datset. The results were as expected, there is not much character or variety as the model just started to train.
+
 ![100th output](/results/popular16/output0100_image.jpg)
 
 Here is the 1000th step, as the model began to produce better and more regonizable results. There is alot more variety, color, and abstract shapes which we hoped would develop better over time.
-![1000th output](/results/popular16)/output1000_image.jpg)
 
-And finally here is our last few result from this session which I felt was decently representative of the datset. Some of the generated album covers were defintely more recognizable.
+![1000th output](/results/popular16/output1000_image.jpg)
+
+And finally here is our last few results from this session which we felt were decently representative of the datset. Some of the generated album covers were defintely more recognizable and full of popular colors that the dataset shared among each other, while the others were not so pleasing to the eye. I think the results were interesting due to the color schemes and the overall abstractness of the shapes, alloted a wide variety of new conceptual themes for future album art. 
+
 ![7900th output](/results/popular16/output7900_image.jpg)
-![9500th output](/results/popular16/output9500_image.jpg)
-![9999th output](/results/popular16/output9999_image.jpg)
 
-Our second attempt fell short of the 10,000 step mark as my computer shut down a few hours in, but for this attempt we utilized a batch size of 64 with the same noise shape of (1,1,100). We noticed that the results were much more detailed and clear but still generally burry in most cases. We felt as these changed values provided better generative results, however the consequence was a much slower generative process which we ran overnight.
+![8800th output](/results/popular16/output8800_image.jpg)
 
-Here is the 100th step, as the model began to train on the datset. It looks about the same as the previous attempt.
+![9600th output](/results/popular16/output9600_image.jpg)
+
+
+Our second attempt fell short of the 10,000 step mark as our computer shut down a few hours in, but for this attempt we utilized a batch size of 64 with the same noise shape of (1,1,100). We noticed that the results were much more detailed and clear but still generally burry in most cases. We felt as these modified inputs provided better and clearer generative results, however the drawback was a much slower generative process which we had to run overnight.
+
+Here is the 100th step, as the model began to train on the datset. It looks about the same as the previous attempt, which wasn't suprising. It does seem more uniform in noise and color than the previous session, but that mightjust due to the random noise vector that was generated for this time.
+
 ![100th output](results/popular64/output0100_image.jpg)
 
-Here is the 1000th step, as the model began to produce better and regonizable results.
+Here is the 1000th step. We defintely felt more optimistic for this session as the results were getting produced at a faster rate, in terms of steps, than our previous session. 
+
 ![1000th output](results/popular64/output1000_image.jpg)
 
-And finally here is our last few result from this session, which produced result
+And finally here is our last few results from this session, which produced fairly finer results that we felt were more compeling in variation and slightly clearer that our previous generative session.
 
+![6200th output](results/popular64/output6200_image.jpg)
 
+![6400th output](results/popular64/output6400_image.jpg)
 
+![6700th output](results/popular64/output6700_image.jpg)
 
-(30 points) 
+Lastly we complied a gif of the generative process as our GAN began training, and each iteration is after 100 steps with the ending being the 6700th step. The progress of the gif shows the training process of our GAN and it visually depicts how the GAN loss is decreasing on average the more steps it runs.
 
-This section should summarize your results and will embed links to documentation to significant outputs. This should document both process and show artistic results. This can include figures, sound files, videos, bitmaps, as appropriate to your generative art idea. Each result should include a brief textual description, and all should be listed below: 
+![gif progress](/results/progress.gif)
 
-- image files (`.jpg`, `.png` or whatever else is appropriate)
-- audio files (`.wav`, `.mp3`)
-- written text as `.pdf`
 
 ## Discussion
+
+After running multiple sessions with our GAN, one thing was defintely certain: we had no idea what results the next step was going to produce. It was a fascinating and interesting process and the more time the model trained, the more variations of shapes, details and popular color schemes came to light. We felt as the results were defintely not perfect in any picturesque standards, but by the end we noticed familiar but new/fresh conceptual ideas that could potentially provide compelling insight and inspiration for the kpop industry within the visual sector. 
+
 
 (30 points, three to five paragraphs)
 
@@ -97,25 +108,23 @@ Provide an account of individual members and their efforts/contributions to the 
 
 ## Technical Notes and Dependencies
 
-Any implementation details or notes we need to repeat your work. 
-- Additional libraries you are using for this project
-- Does this code require other pip packages, software, etc?
-- Does this code need to run on some other (non-datahub) platform? (CoLab, etc.)
+There shouldn't been any technical dependencies on other packages except for downloading icrawler for the data acquisition part of the project. Here is a link to the [icrawler library](https://developer.aliyun.com/mirror/npm/package/icrawler), but it can also be downloaded through pip.
 
 ## Reference
 
-https://towardsdatascience.com/generating-modern-arts-using-generative-adversarial-network-gan-on-spell-39f67f83c7b4
+These are a few articles and journals that helped us further understand the generative process and what factors help achieve better and more cohesive results. We also took a look at different album art generation projects like, ["Album Cover Generation from Genre Tags"](https://www.researchgate.net/publication/318987126_Album_Cover_Generation_from_Genre_Tags) by Alexander Hepburn, Ryan McConville, and Raul Santos-Rodriguez which guided us in understanding how we can achieve the goal for the project and further developments that are possible within this realm of exploration.
 
-https://towardsdatascience.com/cyclegans-to-create-computer-generated-art-161082601709
+- https://towardsdatascience.com/generating-modern-arts-using-generative-adversarial-network-gan-on-spell-39f67f83c7b4
 
-https://heartbeat.fritz.ai/stylegans-use-machine-learning-to-generate-and-customize-realistic-images-c943388dc672
+- https://towardsdatascience.com/cyclegans-to-create-computer-generated-art-161082601709
 
-https://towardsdatascience.com/dcgans-generating-dog-images-with-tensorflow-and-keras-fb51a1071432
+- https://heartbeat.fritz.ai/stylegans-use-machine-learning-to-generate-and-customize-realistic-images-c943388dc672
 
+- https://towardsdatascience.com/dcgans-generating-dog-images-with-tensorflow-and-keras-fb51a1071432
 
-https://mlwhiz.com/blog/2019/06/17/gans/
+- https://mlwhiz.com/blog/2019/06/17/gans/
 
-https://www.researchgate.net/publication/318987126_Album_Cover_Generation_from_Genre_Tags
+- https://www.researchgate.net/publication/318987126_Album_Cover_Generation_from_Genre_Tags
 
-https://machinelearningmastery.com/what-are-generative-adversarial-networks-gans/
+- https://machinelearningmastery.com/what-are-generative-adversarial-networks-gans/
 

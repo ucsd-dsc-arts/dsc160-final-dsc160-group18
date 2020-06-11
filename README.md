@@ -1,5 +1,4 @@
-# Project Title
-
+## GENERATED KPOP ALBUM ART
 DSC160 Data Science and the Arts - Final Project - Generative Arts - Spring 2020
 
 Project Team Members: 
@@ -44,6 +43,32 @@ The generator architecture utilizes transposed convolutional layers which are th
 Thus to begin the training process, we sample a batch of images from the dataset, generate random noise to input into the generator which generates "fake" images. Next we train the discriminator using the generated/fake images and the normalized/real images along with their noisy labels, and finally we train the GAN using a random vector of noise and it’s labels while making sure the discriminator remains untrainable. This entire process is repeated within a loop of num_steps to which we put at around 10000 steps. 
 
 ## Results
+
+After multiple sessions with the generator, we tested many different factors in how to generate better and more qualitative results that represented the dataset in a more cohesive way. For our first attempt we utilized a batch size of 16 and a noise shape of (1,1,100) with a step number of 10,000. We noticed that the results were decent but mostly unrecognizable or specific enought to tell what they represented. 
+
+Here is the 100th step, as the model began to train on the datset. The results were as expected, there is not much character or variety as just the model just started to train.
+![100th output](/results/popular16/output0100_image.jpg)
+
+Here is the 1000th step, as the model began to produce better and more regonizable results. There is alot more variety, color, and abstract shapes which we hoped would develop better over time.
+![1000th output](/results/popular16)/output1000_image.jpg)
+
+And finally here is our last few result from this session which I felt was decently representative of the datset. Some of the generated album covers were defintely more recognizable.
+![7900th output](/results/popular16/output7900_image.jpg)
+![9500th output](/results/popular16/output9500_image.jpg)
+![9999th output](/results/popular16/output9999_image.jpg)
+
+Our second attempt fell short of the 10,000 step mark as my computer shut down a few hours in, but for this attempt we utilized a batch size of 64 with the same noise shape of (1,1,100). We noticed that the results were much more detailed and clear but still generally burry in most cases. We felt as these changed values provided better generative results, however the consequence was a much slower generative process which we ran overnight.
+
+Here is the 100th step, as the model began to train on the datset. It looks about the same as the previous attempt.
+![100th output](results/popular64/output0100_image.jpg)
+
+Here is the 1000th step, as the model began to produce better and regonizable results.
+![1000th output](results/popular64/output1000_image.jpg)
+
+And finally here is our last few result from this session, which produced result
+
+
+
 
 (30 points) 
 

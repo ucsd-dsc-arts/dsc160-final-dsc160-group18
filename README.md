@@ -37,18 +37,11 @@ For the data acquisition portion of our code, we first utilized crawlers built i
 
 [Preprocessing & Neural Network Code File](code/network.ipynb)
 
-For the analysis portion of our code, we first had to preprocess the given datasets and normalize the aspect ratio and resolution size to be balanced among every album image. To achieve this we repurposed a thumbnail function to resize every image to be 512 by 512 thus transforming the aspect ratio to a square like normal album covers. After normalizing each image, we imported keras, imageio, pillow, and tensorflow to reconstruct helper functions that contribute to the overall generator and discriminator model. The generator architecture utilizes transposed convolutional layers which are then used to upsample the noise vector to an image, and we further removed many dense layers to make the model fully convolutional. The discriminator on the other hand utilizes a sequence of convolutional layers with a dense layer to predict if an image is either fake or not. Thus to begin training
+For the analysis portion of our code, we first had to preprocess the given datasets and normalize the aspect ratio and resolution size to be balanced among every album image. To achieve this we repurposed a thumbnail function to resize every image to be 512 by 512 thus transforming the aspect ratio to a square like normal album covers are. After normalizing each image, we imported keras, imageio, pillow, and tensorflow to reconstruct helper functions that contribute to the overall generator and discriminator model.
 
-(20 points)
+The generator architecture utilizes transposed convolutional layers which are then used to upsample the noise vector to an image, however we further removed many dense layers to make the model fully convolutional to further benefit our dataset. The discriminator on the other hand utilizes a sequence of convolutional layers with a final dense layer to predict if an image is either fake or not. 
 
-This section will link to the various code for your project (stored within this repository). Your code should be executable on datahub, should we choose to replicate your result. This includes code for: 
-
-- code for data acquisition/scraping
-- code for preprocessing
-- training code (if appropriate)
-- generative methods
-
-Link each of these items to your .ipynb or .py files within this seection, and provide a brief explanation of what the code does. Reading this section we should have a sense of how to run your code.
+Thus to begin the training process, we sample a batch of images from the dataset, generate random noise to input into the generator which generates "fake" images. Next we train the discriminator using the generated/fake images and the normalized/real images along with their noisy labels, and finally we train the GAN using a random vector of noise and it’s labels while making sure the discriminator remains untrainable. This entire process is repeated within a loop of num_steps to which we put at around 10000 steps. 
 
 ## Results
 

@@ -88,8 +88,11 @@ Lastly we complied a gif of the generative process as our GAN began training, an
 
 ## Discussion
 
-After running multiple sessions with our GAN, one thing was defintely certain: we had no idea what results the next step was going to produce. It was a fascinating and interesting process and the more time the model trained, the more variations of shapes, details and popular color schemes came to light. We felt as the results were defintely not perfect in any picturesque standards, but by the end we noticed familiar but new/fresh conceptual ideas that could potentially provide compelling insight and inspiration for the kpop industry within the visual sector. 
+![result](results/result0.jpg)![result](results/result1.jpg)![result](results/result2.jpg)![result](results/result3.jpg)![result](results/result4.png)![result](results/result5.jpg)![result](results/result10.jpg)![result](results/result6.jpg)![result](results/result12.png)
 
+After running multiple sessions with our GAN, one thing was defintely certain: we had no idea what results the next step was going to produce. It was a fascinating and interesting process and the more time the model trained, the more variations of shapes, details, and popular color schemes came to light. We felt as the results were defintely not perfect in any picturesque standards, but by the end we noticed familiar yet new & fresh conceptual ideas that could potentially provide compelling insight and inspiration for the kpop industry within the visual sector. The row of results on top were among our favorite concepts in terms of composition, color, and clarity, and while there were many unappealing generated images we found the variety of thematic abstractions fascinating to look at.
+
+As for future developments, we would like to improve upon our dataset, to further understand how well our GAN works and potentially improve upon the quality of the generated results. Right now our dataset consists of the top 10 kpop albums of each year since 2010, and a lot of the covers are unfortunately reissues of the same album reducing the uniqueness per data. Another issue that comes to mind is how there are only 11 covers by female artists in the top 100 kpop albums of the past decade, so our generated results are unfairly heavily trained on a majority of male group artists. By improving our dataset to include a more diverse set of demographic groups, we can potentially reduce the bias within our current training process.
 
 (30 points, three to five paragraphs)
 

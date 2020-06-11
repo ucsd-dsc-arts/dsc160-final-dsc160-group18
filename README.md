@@ -114,25 +114,23 @@ Provide an account of individual members and their efforts/contributions to the 
 
 ## Technical Notes and Dependencies
 
-Any implementation details or notes we need to repeat your work. 
-- Additional libraries you are using for this project
-- Does this code require other pip packages, software, etc?
-- Does this code need to run on some other (non-datahub) platform? (CoLab, etc.)
+There shouldn't been any technical dependencies on other packages except for downloading icrawler for the data acquisition part of the project. Here is a link to the [icrawler library](https://developer.aliyun.com/mirror/npm/package/icrawler), but it can also be downloaded through pip.
 
 ## Reference
 
-https://towardsdatascience.com/generating-modern-arts-using-generative-adversarial-network-gan-on-spell-39f67f83c7b4
+These are a few articles and journals that helped us further understand the generative process and what factors help achieve better and more cohesive results. We also took a look at different album art generation projects like, ["Album Cover Generation from Genre Tags"](https://www.researchgate.net/publication/318987126_Album_Cover_Generation_from_Genre_Tags) by Alexander Hepburn, Ryan McConville, and Raul Santos-Rodriguez which guided us in understanding how we can achieve the goal for the project and further developments that are possible within this realm of exploration.
 
-https://towardsdatascience.com/cyclegans-to-create-computer-generated-art-161082601709
+- https://towardsdatascience.com/generating-modern-arts-using-generative-adversarial-network-gan-on-spell-39f67f83c7b4
 
-https://heartbeat.fritz.ai/stylegans-use-machine-learning-to-generate-and-customize-realistic-images-c943388dc672
+- https://towardsdatascience.com/cyclegans-to-create-computer-generated-art-161082601709
 
-https://towardsdatascience.com/dcgans-generating-dog-images-with-tensorflow-and-keras-fb51a1071432
+- https://heartbeat.fritz.ai/stylegans-use-machine-learning-to-generate-and-customize-realistic-images-c943388dc672
 
+- https://towardsdatascience.com/dcgans-generating-dog-images-with-tensorflow-and-keras-fb51a1071432
 
-https://mlwhiz.com/blog/2019/06/17/gans/
+- https://mlwhiz.com/blog/2019/06/17/gans/
 
-https://www.researchgate.net/publication/318987126_Album_Cover_Generation_from_Genre_Tags
+- https://www.researchgate.net/publication/318987126_Album_Cover_Generation_from_Genre_Tags
 
-https://machinelearningmastery.com/what-are-generative-adversarial-networks-gans/
+- https://machinelearningmastery.com/what-are-generative-adversarial-networks-gans/
 

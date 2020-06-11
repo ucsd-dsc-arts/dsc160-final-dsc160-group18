@@ -14,7 +14,7 @@ In our Midterm project, our team looked at important songs of each era as outlin
 
 Since K-pop music albums are often strongly associated with its visual branding and concept, we believe it would be interesting to look at album covers from top K-pop albums to new generate concepts with (to clarify, the definition we are using for “K-pop” refers to Korean “idol music” as opposed to all Korean pop songs). For this dataset, we plan on using the Gaon Album Chart data to find the top-selling albums for the 2010s. 
 
-Our first exploration will be a focused on generating album art based on the top selling albums of recent korean history. We then want to explore different datasets of album art from popular boy groups, girl groups, and their icons/logos, to see the contrasting or similar aspects of each demographic. Finally we will scrap random kpop album art from Google and Bing to have a more generalized and larger dataset to generate album art from, also to see how different general kpop album covers are from popular kpop albums. In short, our project will provide greater insight into visual aspects of what makes a popular korean album in conjunction with specific categories like girl groups and boy groups.
+Our first exploration will be a focused on generating album art based on the top selling albums of recent korean history. We then want to explore different datasets of album art from popular boy groups and girl groups to see the contrasting or similar aspects of each demographic. Finally we will scrap random kpop album art from Google and Bing to have a more generalized and larger dataset to generate album art from, also to see how different general kpop album covers are from popular kpop albums. In short, our project will provide greater insight into visual aspects of what makes a popular korean album in conjunction with specific categories like girl groups and boy groups.
 
 To achieve all of this, our technical process will include the use of jupyterhub while utilizing numerous libraries including TensorFlow, Pillow, Keras, and scikit-learn to recreate a deep covolutional generative adversarial network (DC-GAN) that will help us process new album art and display our results in jpg format. 
 
@@ -83,7 +83,7 @@ And finally here is our last few results from this session, which produced fairl
 
 Lastly we complied a gif of the generative process as our GAN began training, and each iteration is after 100 steps with the ending being the 6700th step. The progress of the gif shows the training process of our GAN and it visually depicts how the GAN loss is decreasing on average the more steps it runs.
 
-![gif progress](/results/progress.gif)
+![gif progress](/results/popularprogress.gif)
 
 From our dataset, we noticed that guy groups and girl groups have very different visual concepts, so to generate an album cover more representative of type of group, we separated our dataset into guy groups and girl groups.
 
@@ -97,7 +97,7 @@ This is the result from the girl group dataset:
 
 Lastly, moving to our general albums dataset which is sustainably larger than our popular albums dataset due to the scrapping process, we wanted to understand how general kpop album art compares to their popular counterparts. So for this exploration, we utilized a batch size of 32 (to quicken the process) and a noise shape of (1,1,128). 
 
-Here are some of final results we produced, which we felt turned out fairly more vibrant and diverse in thematic abstractions compared to our previous results.
+Here are some of the final results we produced, which we felt turned out to be fairly more vibrant and diverse in thematic abstractions compared to our previous results. The congregation of a more blurred value set and a further varied dataset produced some interesting and fascinating results that differentiate in color and production than the generated popular album covers. It could also be due to the fact that the popular album covers were heavily saturated with boy group covers which tend to be more dark in theme.
 
 ![4300th output](/results/general32/output4300_image.jpg)
 
@@ -108,6 +108,7 @@ Here are some of final results we produced, which we felt turned out fairly more
 Here is the progress throughout the training process for the general albums dataset in gif format.
 
 ![gif_guygroup](/results/generalprogress.gif)
+
 
 ## Discussion
 
@@ -124,9 +125,9 @@ As for future developments, we would like to improve upon our dataset, to furthe
 
 ## Team Roles
 
-Nicholas Kho: Data collectiom, training the Guy Group/ Girl Group GANS and writing part of the discussion portion.
+Nicholas Kho: Data collection, training the Guy Group/ Girl Group GANS and writing part of the discussion portion.
 
-Brian Qian: Abstract writing (partial), Data collection & explanation, scrapping code & neural network code files, training the popular album dataset & general album dataset, and writing part of the discussion.
+Brian Qian: Abstract writing (partial), Data collection & explanation, scrapping code & neural network code files, training the popular album dataset & general album dataset, and discussion writing (partial).
 
 ## Technical Notes and Dependencies
 

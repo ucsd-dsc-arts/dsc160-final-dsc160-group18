@@ -122,6 +122,20 @@ Some concerns that may arise come alongside with the pre-existing criticism of h
 
 As for future developments, we would like to improve upon our dataset, to further understand how well our GAN works and potentially improve upon the overall quality of the generated results. Right now our dataset consists of the top 10 kpop albums of each year since 2010, and a lot of the covers are unfortunately reissues of the same album reducing the uniqueness per data. Another issue that comes to mind is how there are only 11 covers by female artists (to which there are only 2 female groups that make up those 11) in the top 100 kpop albums of the past decade, so our generated results are unfairly heavily trained on a majority of male group artists. By improving our dataset to include a more diverse set of demographic groups, we can potentially reduce the bias within our current training process.
 
+## Bonus Generative Music Exploration 
+
+As a bonus side exploration, we will also discuss some of the issues and restraints trying to generate Kpop music. This is slightly separate from the whole point of our project; however, in our initial abstract, we discussed the possibility of going generative music with Kpop music, if possible. We thought it was still interesting to bring up why the ability to look into this area is limited, and how it can be improved. We thought it would be interesting to at least explore because of recent collaborations with (Jukedeck and Kpop record label Enterarts)[https://musically.com/2018/02/27/jukedeck-takes-ai-music-korea-k-pop-collaboration/ 
+]. This shows the potential commercial ventures of AI music; in addition, it shows the connection between Kpop and AI. 
+
+First and foremost, issues with doing this are related to a lack of data. Many of the models, like MuseNet,  that music generative models use are based on MIDI music files, since these music files hold different channels of information for each instrument.  Although they can be downloaded for free on sites like www.midiworld.com, these websites don’t typically have Kpop songs. The ones that we do have are actually piano versions from the (GitHub repository)[https://github.com/DBraun/kpop_midi]. 
+We also could have tried generating music using an already known generative model, like (Jukebox)[https://github.com/openai/jukebox/], as it uses raw audio data. However, we decided against this approach because it was too hands-off, as it allowed us to merely run it based on your collection of audio files. Additionally, since it was initially trained on English language songs, interesting features like genres don’t exactly apply since they don’t have one for Kpop. 
+
+Some of these songs don’t technically fall into our abstract definition of Kpop being “idol” music as well, although they are definitely popular songs. The size of this dataset is very small. This presents a massive issue. It is really impossible to train the dataset well because of this. 
+ 
+Because of the limited data, we didn’t really expect good results, or even results that remotely resembled the instrumental. Thus, this became more about messing around with a model and then proposing a model for the theoretical future. 
+ 
+The one we messed around with was the one specified [here](https://medium.com/cindicator/music-generation-with-neural-networks-gan-of-the-week-b66d01e28200 ) and specified in [this git repository](https://github.com/subpath/Keras_music_gereration). Basically, it used a simple recurrent network (using LSTM) using the Keras library. Our results matched that described in the article; it was a track that is somewhat repetitive and had issues with tempo. 
+We mentioned that Kpop is not merely a music genre; it a factory-like production that uses a lot of visual marketing. However, it also has music at its core, making it an interesting facet to explore.  Although our model was very simple, some of the patterns specified [ in “Generating Pokemon-Inspired Music from Neural Networks” ](https://towardsdatascience.com/generating-pokemon-inspired-music-from-neural-networks-bc240014132) we noticed as well, although their model was far more complex. For example, the LSTM model we used also tended to focus on a singular pattern and then repeat. This problem was significantly worse in ours since our dataset was so small, as LSTM models use the next highest probability to occur, and since we had so little data there was little variation. We don’t believe that LSTM is a bad model to use, since patterns are very important in Kpop music, and GAN models don’t have this as much. However, for future use, it would be worth exploring the bi-directional LSTM model that the earlier “Generating Pokemon-Inspired Music from Neural Networks” project made use of. For future exploration, it would be interesting if w were able to create a more extensive database of MIDI K-pop files since they are limited to what is widely and freely available, like classical music. However, given the development of Jukebox, it is very possible that this will be unnecessary, as this model can create music with merely raw audio. 
 
 ## Team Roles
 
@@ -129,7 +143,7 @@ Nicholas Kho: Data collection, neural network code file, training the Guy Group/
 
 Brian Qian: Abstract writing, Data collection & explanation, scrapping code & neural network code files, training the popular album dataset & general album dataset, and discussion writing.
 
-Emma: Abstract writing
+Emma: Abstract writing, MIDI file collection, generative music model training and generation, bonus discussion 
 
 ## Technical Notes and Dependencies
 

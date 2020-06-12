@@ -125,9 +125,11 @@ As for future developments, we would like to improve upon our dataset, to furthe
 
 ## Team Roles
 
-Nicholas Kho: Data collection, training the Guy Group/ Girl Group GANS and writing part of the discussion portion.
+Nicholas Kho: Data collection, neural network code file, training the Guy Group/ Girl Group GANS and writing part of the discussion portion.
 
-Brian Qian: Abstract writing (partial), Data collection & explanation, scrapping code & neural network code files, training the popular album dataset & general album dataset, and discussion writing (partial).
+Brian Qian: Abstract writing, Data collection & explanation, scrapping code & neural network code files, training the popular album dataset & general album dataset, and discussion writing.
+
+Emma: Abstract writing
 
 ## Technical Notes and Dependencies
 
